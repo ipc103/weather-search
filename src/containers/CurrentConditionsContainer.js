@@ -35,7 +35,7 @@ class CurrentConditionsContainer extends Component {
             st: '',
             conditions: {
               temp: data.current_observation.temperature_string,
-              description: data.current_observation.weather,
+              weather: data.current_observation.weather.toLowerCase(),
               city: `${data.location.city}, ${data.location.state}`
             }
           })
