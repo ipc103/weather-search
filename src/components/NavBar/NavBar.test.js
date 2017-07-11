@@ -1,6 +1,6 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import NavBar from './NavBar'
+import NavBar from './'
 
 describe('NavBar', () => {
   it('renders without crashing', () => {

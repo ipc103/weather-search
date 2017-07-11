@@ -1,6 +1,6 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import CurrentConditionsDetail from './CurrentConditionsDetail'
+import CurrentConditionsDetail from './'
 
 describe('CurrentConditionsDetail', () => {
   describe('without props', () => {

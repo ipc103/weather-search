@@ -1,7 +1,7 @@
 import React from 'react'
 
-import NavBar from './NavBar'
-import CurrentConditionsContainer from '../containers/CurrentConditionsContainer'
+import NavBar from '../NavBar'
+import CurrentConditionsContainer from '../../containers/CurrentConditionsContainer'
 
 const App = () => {
   return (
