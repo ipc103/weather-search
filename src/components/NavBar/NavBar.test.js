@@ -6,7 +6,7 @@ describe('NavBar', () => {
   it('renders without crashing', () => {
     const wrapper = shallow(<NavBar/>)
     expect(wrapper).toMatchSnapshot()
-  });
+  })
 
   it('renders with a brand link', () => {
     const wrapper = shallow(<NavBar brand="Coffee" />)

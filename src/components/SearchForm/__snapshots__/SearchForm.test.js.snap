@@ -33,7 +33,7 @@ ShallowWrapper {
         </label>
         <input
             className="form-control"
-            name="st"
+            name="region"
             onChange={undefined}
             type="text"
             value={undefined}
@@ -70,7 +70,7 @@ ShallowWrapper {
             </label>
             <input
                   className="form-control"
-                  name="st"
+                  name="region"
                   onChange={undefined}
                   type="text"
                   value={undefined}
@@ -141,7 +141,7 @@ ShallowWrapper {
                     </label>
                     <input
                               className="form-control"
-                              name="st"
+                              name="region"
                               onChange={undefined}
                               type="text"
                               value={undefined}
@@ -178,7 +178,7 @@ ShallowWrapper {
                     </label>
                     <input
                               className="form-control"
-                              name="st"
+                              name="region"
                               onChange={undefined}
                               type="text"
                               value={undefined}

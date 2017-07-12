@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SearchForm = ({city, state, handleChange, handleSubmit}) => {
+const SearchForm = ({city, region, handleChange, handleSubmit}) => {
   return (
     <form onSubmit={handleSubmit} >
       <div className='form-group'>
@@ -9,7 +9,7 @@ const SearchForm = ({city, state, handleChange, handleSubmit}) => {
       </div>
       <div className='form-group'>
         <label>State</label>
-        <input type='text' name='st' value={state} onChange={handleChange} className='form-control'/>
+        <input type='text' name='region' value={region} onChange={handleChange} className='form-control'/>
       </div>
       <input type='submit' value="Search" />
     </form>
