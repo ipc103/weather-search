@@ -33,24 +33,24 @@ describe('CurrentConditionsContainer', () => {
         expect(wrapper.state()).toEqual(expected)
       })
     })
-  })
 
-  describe('with an invalid city and region', () => {
-    beforeEach(() => {
-      wrapper.setState({city: 'Pit', region: 'Pennsy'})
-      const event = new Event('submit')
-      wrapper.instance().handleSearch(event)
-    })
+    describe('with an invalid city and region', () => {
+      beforeEach(() => {
+        wrapper.setState({city: 'Pit', region: 'Pennsy'})
+        const event = new Event('submit')
+        wrapper.instance().handleSearch(event)
+      })
 
-    it('stores an error message in the conditions', () => {
-      const expected = {
-        city: 'Pit',
-        region: 'Pennsy',
-        conditions: {
-          message: 'No results found'
+      it('stores an error message in the conditions', () => {
+        const expected = {
+          city: 'Pit',
+          region: 'Pennsy',
+          conditions: {
+            message: 'No results found'
+          }
         }
-      }
-      expect(wrapper.state()).toEqual(expected)
+        expect(wrapper.state()).toEqual(expected)
+      })
     })
   })
 })
