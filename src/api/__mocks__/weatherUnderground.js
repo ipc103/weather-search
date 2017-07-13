@@ -13,6 +13,8 @@ export function fetchCurrentConditions(city, state){
   return new Promise((resolve, reject) => {
     if (city === 'Pittsburgh') {
       resolve(currentConditions)
+    } else {
+      resolve({})
     }
   })
 }

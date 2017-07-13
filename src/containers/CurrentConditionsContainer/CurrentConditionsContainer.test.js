@@ -5,13 +5,13 @@ import CurrentConditionsContainer from './'
 jest.mock('../../api/weatherUnderground')
 
 describe('CurrentConditionsContainer', () => {
+  const wrapper = shallow(<CurrentConditionsContainer/>)
+
   it('renders without crashing', () => {
-    const wrapper = shallow(<CurrentConditionsContainer/>)
     expect(wrapper).toMatchSnapshot()
   })
 
   describe('searching for a city and region', () => {
-    const wrapper = mount(<CurrentConditionsContainer/>)
 
     describe('with valid city and region', () => {
       beforeEach(() => {
@@ -32,6 +32,25 @@ describe('CurrentConditionsContainer', () => {
         }
         expect(wrapper.state()).toEqual(expected)
       })
+    })
+  })
+
+  describe('with an invalid city and region', () => {
+    beforeEach(() => {
+      wrapper.setState({city: 'Pit', region: 'Pennsy'})
+      const event = new Event('submit')
+      wrapper.instance().handleSearch(event)
+    })
+
+    it('stores an error message in the conditions', () => {
+      const expected = {
+        city: 'Pit',
+        region: 'Pennsy',
+        conditions: {
+          message: 'No results found'
+        }
+      }
+      expect(wrapper.state()).toEqual(expected)
     })
   })
 })
